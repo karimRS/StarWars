@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CharacterCell" customModule="StarWars" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="549" height="153"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XCD-VV-psL">
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="XCD-VV-psL" secondAttribute="height" multiplier="1:1" id="XAT-OB-v6U"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUW-SE-Owu">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="58" id="F99-g1-D6W"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TUW-SE-Owu" secondAttribute="trailing" constant="20" id="FPE-fF-pnX"/>
+                <constraint firstItem="TUW-SE-Owu" firstAttribute="leading" secondItem="XCD-VV-psL" secondAttribute="trailing" constant="8" id="Ysk-Rd-ezo"/>
+                <constraint firstItem="XCD-VV-psL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="cmJ-HK-fEH"/>
+                <constraint firstItem="XCD-VV-psL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="eMx-ms-ssv"/>
+                <constraint firstItem="XCD-VV-psL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="jRF-dV-iw9"/>
+                <constraint firstItem="TUW-SE-Owu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="z8r-Yd-Vbs"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageViewCell" destination="XCD-VV-psL" id="p3d-oL-fIw"/>
+                <outlet property="labelCell" destination="TUW-SE-Owu" id="28K-Vt-lbh"/>
+            </connections>
+            <point key="canvasLocation" x="75.5" y="43.5"/>
+        </view>
+    </objects>
+</document>
