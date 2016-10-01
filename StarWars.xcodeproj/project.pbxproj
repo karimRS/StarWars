@@ -20,6 +20,10 @@
 		8A50C9DC1D9D9CC200C490A1 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50C9DB1D9D9CC200C490A1 /* Database.swift */; };
 		8A50C9DE1D9DDE7A00C490A1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50C9DD1D9DDE7A00C490A1 /* DetailViewController.swift */; };
 		8A50C9E01D9DDED000C490A1 /* NewCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50C9DF1D9DDED000C490A1 /* NewCharacterViewController.swift */; };
+		8A50C9E21D9E828E00C490A1 /* NewCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50C9E11D9E828E00C490A1 /* NewCharacterView.swift */; };
+		8A50C9E61D9E8AAF00C490A1 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A50C9E51D9E8AAF00C490A1 /* PickerView.swift */; };
+		8A50C9EB1D9E970400C490A1 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A50C9EA1D9E970400C490A1 /* UIImage+ImageEffects.m */; };
+		8A50C9ED1D9EA36200C490A1 /* PickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A50C9EC1D9EA36200C490A1 /* PickerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,12 @@
 		8A50C9DB1D9D9CC200C490A1 /* Database.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		8A50C9DD1D9DDE7A00C490A1 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8A50C9DF1D9DDED000C490A1 /* NewCharacterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCharacterViewController.swift; sourceTree = "<group>"; };
+		8A50C9E11D9E828E00C490A1 /* NewCharacterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCharacterView.swift; sourceTree = "<group>"; };
+		8A50C9E51D9E8AAF00C490A1 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		8A50C9E81D9E970400C490A1 /* StarWars-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StarWars-Bridging-Header.h"; sourceTree = "<group>"; };
+		8A50C9E91D9E970400C490A1 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		8A50C9EA1D9E970400C490A1 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		8A50C9EC1D9EA36200C490A1 /* PickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PickerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,11 +101,13 @@
 		8A50C99B1D9D61B100C490A1 /* StarWars */ = {
 			isa = PBXGroup;
 			children = (
+				8A50C9E71D9E96F800C490A1 /* Categories */,
 				8A50C9BF1D9D657100C490A1 /* Model */,
 				8A50C9C01D9D657800C490A1 /* View */,
 				8A50C9C11D9D658000C490A1 /* Controller */,
 				8A50C9A01D9D61B100C490A1 /* Main.storyboard */,
 				8A50C9D91D9D936900C490A1 /* CharacterCell.xib */,
+				8A50C9EC1D9EA36200C490A1 /* PickerView.xib */,
 				8A50C9DB1D9D9CC200C490A1 /* Database.swift */,
 				8A50C9A61D9D61B100C490A1 /* Assets.xcassets */,
 				8A50C9A81D9D61B100C490A1 /* LaunchScreen.storyboard */,
@@ -126,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				8A50C9C21D9D667800C490A1 /* TableView */,
+				8A50C9E11D9E828E00C490A1 /* NewCharacterView.swift */,
+				8A50C9E51D9E8AAF00C490A1 /* PickerView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -147,6 +161,16 @@
 				8A50C9C51D9D892800C490A1 /* CharacterCell.swift */,
 			);
 			name = TableView;
+			sourceTree = "<group>";
+		};
+		8A50C9E71D9E96F800C490A1 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				8A50C9E91D9E970400C490A1 /* UIImage+ImageEffects.h */,
+				8A50C9EA1D9E970400C490A1 /* UIImage+ImageEffects.m */,
+				8A50C9E81D9E970400C490A1 /* StarWars-Bridging-Header.h */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +224,7 @@
 					8A50C9981D9D61B100C490A1 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V6EZZ3Q8C5;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 					8A50C9AF1D9D61B100C490A1 = {
@@ -234,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A50C9ED1D9EA36200C490A1 /* PickerView.xib in Resources */,
 				8A50C9AA1D9D61B100C490A1 /* LaunchScreen.storyboard in Resources */,
 				8A50C9A71D9D61B100C490A1 /* Assets.xcassets in Resources */,
 				8A50C9A21D9D61B100C490A1 /* Main.storyboard in Resources */,
@@ -258,6 +284,9 @@
 				8A50C9DC1D9D9CC200C490A1 /* Database.swift in Sources */,
 				8A50C9C61D9D892800C490A1 /* CharacterCell.swift in Sources */,
 				8A50C9E01D9DDED000C490A1 /* NewCharacterViewController.swift in Sources */,
+				8A50C9E21D9E828E00C490A1 /* NewCharacterView.swift in Sources */,
+				8A50C9EB1D9E970400C490A1 /* UIImage+ImageEffects.m in Sources */,
+				8A50C9E61D9E8AAF00C490A1 /* PickerView.swift in Sources */,
 				8A50C99F1D9D61B100C490A1 /* CharactersTableViewController.swift in Sources */,
 				8A50C99D1D9D61B100C490A1 /* AppDelegate.swift in Sources */,
 				8A50C9A51D9D61B100C490A1 /* StarWars.xcdatamodeld in Sources */,
@@ -402,6 +431,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = V6EZZ3Q8C5;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
@@ -410,6 +440,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KRS.StarWars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StarWars/StarWars-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -420,6 +452,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = V6EZZ3Q8C5;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
@@ -428,6 +461,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KRS.StarWars;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "StarWars/StarWars-Bridging-Header.h";
 				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				SWIFT_VERSION = 3.0;
 			};
