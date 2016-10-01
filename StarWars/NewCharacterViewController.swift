@@ -13,8 +13,6 @@ protocol NewCharacterViewControllerDelegate: class {
     func NewCharacterViewControllerDidCancel(_ newCharacterViewController: NewCharacterViewController)
 }
 
-
-
 class NewCharacterViewController: UIViewController, UIGestureRecognizerDelegate {
 
     weak var delegate: NewCharacterViewControllerDelegate?
@@ -59,17 +57,16 @@ class NewCharacterViewController: UIViewController, UIGestureRecognizerDelegate 
         
         guard nameTextField.text != "" else {
             print("notext")
+            //TODO: alert
             return
         }
         
         let char = Character(name: nameTextField.text!,specie: selectedSpecie,faction: selectedFaction)
-        
         delegate?.NewCharacterViewController(self, created: char)
-        
     }
     
     @IBAction func cancel(_ sender: AnyObject) {
-      //  closeKeyboard()
+        nameTextField.resignFirstResponder()
         delegate?.NewCharacterViewControllerDidCancel(self)
     }
     
@@ -82,7 +79,6 @@ class NewCharacterViewController: UIViewController, UIGestureRecognizerDelegate 
         nameTextField.resignFirstResponder()
         pickerController = UINib(nibName: PickerView.nibIdentifier, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! PickerView
         pickerController.delegate = self
-    
         saveBarButton.isEnabled = false
         
         let image = getBlur()
@@ -97,12 +93,11 @@ class NewCharacterViewController: UIViewController, UIGestureRecognizerDelegate 
     }
 
     @IBAction func changeSpecie(_ sender: AnyObject) {
+        
         nameTextField.resignFirstResponder()
-
         pickerController = UINib(nibName: PickerView.nibIdentifier, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! PickerView
-        saveBarButton.isEnabled = false
         pickerController.delegate = self
-
+        saveBarButton.isEnabled = false
         
         let image = getBlur()
         pickerController.setBackImage(image: image)
@@ -113,7 +108,6 @@ class NewCharacterViewController: UIViewController, UIGestureRecognizerDelegate 
         
         view.addSubview(pickerController)
     }
-    
 
 }
 
@@ -122,7 +116,6 @@ extension NewCharacterViewController: NewCharacterPickerDelegate {
     func NewFactionPicker(_ pickerView: PickerView, faction: Character.Faction) {
         
         self.enableSaveButton()
-        
         selectedFaction = faction
         self.factionButton.setImage(faction.image, for: .normal)
         
